@@ -12,9 +12,8 @@ app.set('view engine', 'pug')
 //Rutas
 app.use('/',router)
 
-app.get('/start', (req, res) => {
-    res.send("Hola, bienvenido")
-})
+//Habilitar carpeta publica
+app.use(express.static('public'))
 
 app.listen(port, () => {
     console.log(`Servidor corriendo en el puerto ${port}`);
