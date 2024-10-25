@@ -10,7 +10,7 @@ const port = process.env.PORT || 4000;
 app.set('view engine', 'pug')
 
 //Rutas
-app.use(router)
+app.use('/',router)
 
 app.get('/start', (req, res) => {
     res.send("Hola, bienvenido")
