@@ -28,6 +28,7 @@ app.use('/',router)
 try {
     await db.authenticate()
     console.log('Connection has been established successfully.')
+    db.sync();
 } catch (error) {
     console.error(error)
 }
