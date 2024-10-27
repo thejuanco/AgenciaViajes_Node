@@ -15,6 +15,7 @@ app.use(express.static('public'))
 app.use((req, res, next) => {
     //res.locals.year = new Date().getFullYear(); //locals es propio de express
     const year = new Date()
+    res.locals.nombreSitio = "Agencia de Viajes"
     res.locals.actualYear = year.getFullYear()
     next();
 })
