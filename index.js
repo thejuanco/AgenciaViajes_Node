@@ -1,5 +1,6 @@
 import express from 'express';
 import router from './routes/index.routes.js';
+import db from './config/db.js';
 
 const app = express();
 
@@ -22,6 +23,14 @@ app.use((req, res, next) => {
 
 //Rutas
 app.use('/',router)
+
+//Probando la conexión con la base de datos
+try {
+    await db.authenticate()
+    console.log('Connection has been established successfully.')
+} catch (error) {
+    console.error(error)
+}
 
 app.listen(port, () => {
     console.log(`Servidor corriendo en el puerto ${port}`);
