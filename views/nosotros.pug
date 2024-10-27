@@ -3,4 +3,29 @@ extends ./layout/index
 block contenido
     main.container.mt-5 
         .row
-            h1= pagina
+            .col-md-5 
+                img(src="img/nosotros.jpg", alt="nosotros", class="img-fluid") 
+            .col-md-7
+                h1= pagina
+                blockquote Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati quod impedit beatae. Odit, sequi. Rem sequi aliquid laborum delectus exercitationem nemo, atque possimus eveniet error autem fuga, ipsam ipsa!
+                p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati quod impedit beatae. Odit, sequi. Rem sequi aliquid laborum delectus exercitationem nemo, atque possimus eveniet error autem fuga, ipsam ipsa!
+                p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati quod impedit beatae. Odit, sequi. Rem sequi aliquid laborum delectus exercitationem nemo, atque possimus eveniet error autem fuga, ipsam ipsa!
+
+    .listado-iconos
+        .container.mt-5.py-5.text-center
+            .row    
+                .col-md-4
+                    img(src="img/icono_seguridad.svg", alt="Icono seguridad", class="img-fluid mb-4")
+                    h2.mb-4 Seguridad
+                    p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium, facere. Qui libero voluptatem sit ratione, cum soluta debitis similique amet quis consequatur? Eveniet, officiis ad rerum aperiam deserunt non distinctio!
+                
+                .col-md-4
+                    img(src="img/icono_destinos.svg", alt="Icono servicios", class="img-fluid mb-4")
+                    h2.mb-4 Destinos
+                    p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium, facere. Qui libero voluptatem sit ratione, cum soluta debitis similique amet quis consequatur? Eveniet, officiis ad rerum aperiam deserunt non distinctio!
+                
+                .col-md-4
+                    img(src="img/icono_precios.svg", alt="Icono servicios", class="img-fluid mb-4")
+                    h2.mb-4 Precios
+                    p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium, facere. Qui libero voluptatem sit ratione, cum soluta debitis similique amet quis consequatur? Eveniet, officiis ad rerum aperiam deserunt non distinctio!
+                
