@@ -1,3 +1,5 @@
+import { Testimonial } from "../models/Testimoniales.js"
+
 const guardarTestimoniales = (req, res) => {
     //Validar
     const {nombre, correo, mensaje} = req.body
@@ -16,8 +18,6 @@ const guardarTestimoniales = (req, res) => {
         errores.push({mensaje: 'El mensaje esta vacio'})
     }
 
-    console.log(errores)
-
     if(errores.length > 0){
         //Mostrar la vista con errores
         res.render('testimoniales', {
@@ -28,6 +28,19 @@ const guardarTestimoniales = (req, res) => {
             mensaje
         })
         return
+    } else {
+        //Alamcenar en la base de datos
+        try {
+            Testimonial.create({
+                nombre,
+                correo,
+                mensaje
+            })
+
+            res.redirect('/testimoniales')
+        } catch (error) {
+            console.log(error)
+        }
     }
 }
 
