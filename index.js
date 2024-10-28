@@ -21,6 +21,9 @@ app.use((req, res, next) => {
     next();
 })
 
+//Leer datos del formulario
+app.use(express.urlencoded({extended: true}))
+
 //Rutas
 app.use('/',router)
 
