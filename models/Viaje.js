@@ -21,7 +21,7 @@ export const Viaje = db.define("viajes", {
   descripcion: {
     type: DataTypes.STRING,
   },
-  diponibles: {
+  disponibles: {
     type: DataTypes.STRING,
   },
   slug: {
