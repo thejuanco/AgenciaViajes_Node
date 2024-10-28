@@ -1,6 +1,6 @@
 import { Testimonial } from "../models/Testimoniales.js"
 
-const guardarTestimoniales = (req, res) => {
+const guardarTestimoniales = async (req, res) => {
     //Validar
     const {nombre, correo, mensaje} = req.body
 
@@ -19,9 +19,13 @@ const guardarTestimoniales = (req, res) => {
     }
 
     if(errores.length > 0){
+        //Consultar testimoniales
+        const testimoniales = await Testimonial.findAll()
+
         //Mostrar la vista con errores
         res.render('testimoniales', {
             pagina: 'Testimoniales',
+            testimoniales,
             errores,
             nombre,
             correo,
@@ -31,7 +35,7 @@ const guardarTestimoniales = (req, res) => {
     } else {
         //Alamcenar en la base de datos
         try {
-            Testimonial.create({
+            await Testimonial.create({
                 nombre,
                 correo,
                 mensaje
