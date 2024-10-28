@@ -1,5 +1,22 @@
 const guardarTestimoniales = (req, res) => {
-    console.log(req.body)
+    //Validar
+    const {nombre, correo, mensaje} = req.body
+
+    const errores = []
+
+    if(nombre.trim() === ''){
+        errores.push({nombre: 'El nombre esta vacio'})
+    }
+
+    if(correo.trim() === ''){
+        errores.push({correo: 'El correo esta vacio'})
+    }
+
+    if(mensaje.trim() === ''){
+        errores.push({mensaje: 'El mensaje esta vacio'})
+    }
+
+    console.log(errores)
 }
 
 export {
