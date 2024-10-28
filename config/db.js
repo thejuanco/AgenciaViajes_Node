@@ -12,7 +12,7 @@ const db = new Sequelize(
     port: process.env.DATABASE_PORT,
     dialect: "mysql",
     define: {
-      timestamps: true,
+      timestamps: false,
     },
     pool: {
       max: 5,
