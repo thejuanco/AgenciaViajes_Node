@@ -1,6 +1,17 @@
 extends ./layout/index
 
+block slider
+    .slider     
+        h1 Rio de Janeiro 
+        em aventura
+
 block contenido
     main.container.mt-5 
+        h2.text-center.mb-5 Sobre Nosotros
         .row
-            h1= pagina
+            .col-md-6 
+                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, laboriosam, repudiandae repellendus doloribus veniam minima amet exercitationem cum necessitatibus natus.
+                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, laboriosam, repudiandae repellendus doloribus veniam minima amet exercitationem cum necessitatibus natus.
+
+            .col-md-6
+                img(src="/img/inicio_nosotros.jpg", alt="Imagen inicio", class="img-fluid")
