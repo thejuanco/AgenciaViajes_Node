@@ -22,6 +22,9 @@ app.use((req, res, next) => {
     next();
 })
 
+//Leer datos del formulario
+app.use(express.urlencoded({extended: true}))
+
 //Rutas
 app.use('/',router)
 
@@ -29,6 +32,7 @@ app.use('/',router)
 try {
     await db.authenticate()
     console.log('Connection has been established successfully.')
+    db.sync();
 } catch (error) {
     console.error(error)
 }

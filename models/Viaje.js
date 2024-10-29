@@ -19,9 +19,9 @@ export const Viaje = db.define("viajes", {
     type: DataTypes.STRING,
   },
   descripcion: {
-    type: DataTypes.STRING,
+    type: DataTypes.TEXT,
   },
-  diponibles: {
+  disponibles: {
     type: DataTypes.STRING,
   },
   slug: {
