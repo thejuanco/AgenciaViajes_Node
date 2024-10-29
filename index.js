@@ -2,6 +2,7 @@ import express from 'express';
 import router from './routes/index.routes.js';
 import db from './config/db.js';
 
+//Creando la app
 const app = express();
 
 //Definir el puerto
